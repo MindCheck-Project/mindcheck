@@ -3,41 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindCheck - Portal Autocunoaștere</title>
+    <title>MindCheck | Navighează-ți Mintea</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <div class="container nav-content">
-            <a href="index.html" class="logo">MindCheck</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo">MINDCHECK</a>
+            <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; letter-spacing: 1px;">BETA v1.2</div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Sănătatea ta mentală<br><span style="color:var(--primary)">contează.</span></h1>
-            <p>Explorează teste de autoevaluare și articole scrise pe înțelesul tău.</p>
+            <h1 style="margin-bottom: 10px;">Descoperă-ți<br><span style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Potențialul.</span></h1>
+            <p>Instrumente de autoevaluare clinice și resurse bazate pe neuroștiință, ambalate într-o experiență digitală modernă.</p>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" style="padding-bottom: 100px;">
         <div class="grid">
-            <!-- Card 1 -->
+            
+            <!-- Card ADHD -->
             <div class="card">
+                <div style="background: var(--accent-gradient); width: 40px; height: 4px; border-radius: 2px; margin-bottom: 20px;"></div>
                 <h3>ADHD la Adulți</h3>
-                <p>Ești mereu distras sau agitat? Fă testul ASRS și înțelege cum funcționează creierul tău.</p>
-                <a href="articole/adhd.html" class="btn">Deschide Articolul</a>
+                <p>Analiză detaliată despre neurodivergență, mituri și un test clinic ASRS cu 12 puncte de control.</p>
+                <a href="articole/adhd.html" class="btn">Deschide Modulul</a>
             </div>
 
-            <!-- Card 2 (Viitor) -->
-            <div class="card">
-                <h3>Anxietate Socială</h3>
-                <p>Simți un disconfort constant în grupuri mari de oameni? Află de ce se întâmplă asta.</p>
-                <a href="#" class="btn" style="background:#cbd5e1">În curând</a>
+            <!-- Card Anxietate (Placeholder) -->
+            <div class="card" style="opacity: 0.6; cursor: not-allowed;">
+                <div style="background: #475569; width: 40px; height: 4px; border-radius: 2px; margin-bottom: 20px;"></div>
+                <h3>Anxietate GAD-7</h3>
+                <p>Evaluează-ți nivelul de stres și îngrijorare. Modulul este în curs de procesare și documentare.</p>
+                <span style="color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">În curând</span>
             </div>
+
+            <!-- Card Somn/Productivitate (Placeholder) -->
+            <div class="card" style="opacity: 0.6; cursor: not-allowed;">
+                <div style="background: #475569; width: 40px; height: 4px; border-radius: 2px; margin-bottom: 20px;"></div>
+                <h3>Optimizare Somn</h3>
+                <p>Cum influențează ritmul circadian performanța cognitivă zilnică. Resurse în pregătire.</p>
+                <span style="color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase;">În curând</span>
+            </div>
+
         </div>
     </main>
+
+    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid var(--glass-border);">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 MindCheck Project. Science-backed. Tech-driven.</p>
+    </footer>
 
 </body>
 </html>
