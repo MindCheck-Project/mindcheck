@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxietatea: Prieten sau Dușman? - MindCheck</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Designul Pastel Soft Dark */
+        :root {
+            --bg-dark: #1a1c1e;
+            --card-bg: #232629;
+            --accent: #a3b18a; /* Sage Green */
+            --accent-soft: rgba(163, 177, 138, 0.1);
+            --text-main: #d4d7b8;
+            --text-bright: #e9edc9;
+        }
+
+        .article-body { max-width: 800px; margin: 60px auto; color: var(--text-main); line-height: 1.8; font-size: 1.1rem; }
+        
+        .hero-title { 
+            font-size: clamp(2rem, 5vw, 3.5rem); 
+            font-weight: 800; 
+            color: var(--text-bright); 
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .meta-info { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 10px; display: block; }
+
+        .highlight-box { 
+            background: var(--accent-soft); 
+            border-left: 3px solid var(--accent); 
+            padding: 30px; 
+            border-radius: 12px; 
+            margin: 40px 0;
+            color: var(--text-bright);
+            font-style: italic;
+        }
+
+        h2 { color: var(--accent); margin-top: 50px; font-size: 1.8rem; }
+        strong { color: var(--text-bright); }
+
+        /* Quiz Styling */
+        #quiz-module {
+            background: var(--card-bg);
+            border: 1px solid rgba(163, 177, 138, 0.2);
+            border-radius: 40px;
+            padding: 45px;
+            margin: 80px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .q-text { font-size: 1.4rem; font-weight: 600; color: var(--text-bright); margin-bottom: 30px; min-height: 70px; }
+        
+        .opt-grid { display: grid; gap: 12px; }
+        .opt-btn {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(163, 177, 138, 0.1);
+            padding: 18px;
+            border-radius: 20px;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .opt-btn:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateX(8px);
+        }
+
+        .progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; margin-bottom: 30px; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width 0.4s ease; }
+
+        #result-screen { display: none; text-align: center; }
+        .score-display { font-size: 3rem; font-weight: 800; color: var(--accent); margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<nav><div class="container"><a href="../index.html" class="logo">MINDCHECK</a></div></nav>
+
+<div class="container">
+    <article class="article-body">
+        <span class="meta-info">Biologie & Evoluție</span>
+        <h1 class="hero-title">Anxietatea: <br>Prieten sau Dușman?</h1>
+
+        <p>Într-o lume dominată de tehnologie, algoritmi și confort digital, purtăm cu noi un „software” biologic vechi de sute de mii de ani. Creierul uman folosește în momente de presiune aceleași circuite rudimentare pe care le foloseau strămoșii noștri în savana africană.</p>
+
+        <div class="highlight-box">
+            „Această discrepanță între ritmul evoluției tehnologice și cel al evoluției biologice este locul unde se naște ceea ce numim, adesea cu teamă, anxietate.”
+        </div>
+
+        <h2>Arhitectura fricii: Moștenirea de neatins</h2>
+        <p>Pentru a înțelege de ce inima îți bubuie în piept înaintea unei banale ședințe pe Zoom, trebuie să privim spre <strong>amigdală</strong>. Această mică structură a sistemului limbic joacă rolul unui radar de supraviețuire.</p>
+        
+        <p>Atunci când interpretăm un eveniment ca fiind amenințător, amigdala declanșează instantaneu axa HPA. Rezultatul? O cascadă de hormoni (adrenalină și cortizol) care pregătesc corpul pentru o acțiune fizică explozivă:</p>
+        <ul>
+            <li>Văzul devine mai ager prin dilatarea pupilelor.</li>
+            <li>Sângele este pompat către mușchii mari, abandonând procesele „neesențiale” (digestia).</li>
+            <li>Gândirea abstractă este suspendată în favoarea instinctului pur.</li>
+        </ul>
+
+        <h2>Paradoxul Modern: Pericole invizibile</h2>
+        <p>Tragedia omului modern este că „tigrul” a devenit abstract. Astăzi, amenințările sunt psihosociale: teama de eșec, judecata celorlalți sau deadline-urile strânse.</p>
+        
+        <p>Deoarece corpul nu poate distinge între o fiară sălbatică și un mail urgent, el reacționează identic:</p>
+        <ul>
+            <li><strong>Agitația psihomotorie:</strong> Nevoia de a tremura din picior (energie neconsumată).</li>
+            <li><strong>Hiperventilația:</strong> Corpul încearcă să se oxigeneze pentru un efort fizic care nu mai are loc.</li>
+            <li><strong>Ceața cerebrală:</strong> Cortexul prefrontal (logica) este parțial „deconectat”.</li>
+        </ul>
+
+        <h2>Îmblânzirea mecanismului</h2>
+        <p>Soluția nu este extirparea anxietății, ci recalibrarea sistemului. Putem „păcăli” biologia să creadă că pericolul a trecut prin:</p>
+        <ol>
+            <li><strong>Finalizarea ciclului de stres:</strong> Exercițiul fizic consumă hormonii stresului.</li>
+            <li><strong>Tehnici de Grounding (5-4-3-2-1):</strong> Ancorarea în realitatea senzorială imediată.</li>
+            <li><strong>Reîncadrarea cognitivă:</strong> Interpretarea tremurului ca „pregătire”, nu ca „frică”.</li>
+        </ol>
+
+        <!-- QUIZ ANXIETATE -->
+        <section id="quiz-module">
+            <div id="quiz-content">
+                <span style="color: var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Evaluare Nivel Anxietate</span>
+                <div class="progress-bar"><div class="progress-fill" id="p-fill"></div></div>
+                <div class="q-text" id="q-text">Se încarcă...</div>
+                <div class="opt-grid">
+                    <button class="opt-btn" onclick="handle(0)">Deloc</button>
+                    <button class="opt-btn" onclick="handle(1)">Câteva zile</button>
+                    <button class="opt-btn" onclick="handle(2)">Mai mult de jumătate din zile</button>
+                    <button class="opt-btn" onclick="handle(3)">Aproape în fiecare zi</button>
+                </div>
+                <p id="q-count" style="margin-top: 20px; font-size: 0.9rem; color: #64748b;">Întrebarea 1 / 15</p>
+            </div>
+
+            <div id="result-screen">
+                <div class="score-display" id="final-score">0</div>
+                <h2 id="res-title" style="margin-top: 0;">Rezultat Analiză</h2>
+                <p id="res-desc" style="margin-bottom: 30px;"></p>
+                <button class="btn" onclick="location.reload()">Reia Testul</button>
+            </div>
+        </section>
+    </article>
+</div>
+
+<script>
+    const questions = [
+        "Te simți nervos, anxios sau la limită?",
+        "Nu poți opri sau controla îngrijorarea?",
+        "Te îngrijorezi prea mult pentru diverse lucruri?",
+        "Ai dificultăți în a te relaxa?",
+        "Ești atât de neliniștit încât este greu să stai locului?",
+        "Devii ușor iritabil sau enervat?",
+        "Ai un sentiment de teamă, ca și cum ceva groaznic s-ar putea întâmpla?",
+        "Ai probleme cu somnul (adormi greu sau te trezești des)?",
+        "Simți tensiune musculară sau dureri de cap neexplicate?",
+        "Simți că inima îți bate mai repede fără un motiv fizic?",
+        "Ai dificultăți de concentrare din cauza grijilor?",
+        "Eviți situații sociale de teamă că te vei simți anxios?",
+        "Ai senzația de sufocare sau 'nod în gât' în momente tensionate?",
+        "Te simți obosit sau epuizat deși nu ai depus efort fizic?",
+        "Ai tendința de a analiza excesiv conversațiile trecute?"
+    ];
+
+    let current = 0; let score = 0;
+
+    function update() {
+        document.getElementById('q-text').innerText = questions[current];
+        document.getElementById('q-count').innerText = `Întrebarea ${current + 1} / 15`;
+        document.getElementById('p-fill').style.width = `${((current) / 15) * 100}%`;
+    }
+
+    function handle(val) {
+        score += val;
+        if(current < 14) { current++; update(); }
+        else { showResults(); }
+    }
+
+    function showResults() {
+        document.getElementById('quiz-content').style.display = 'none';
+        const rs = document.getElementById('result-screen');
+        rs.style.display = 'block';
+        document.getElementById('final-score').innerText = score;
+
+        let t, d;
+        if(score >= 30) { t = "Anxietate Severă"; d = "Nivelul tău de stres afectează calitatea vieții. Ar fi indicat să consulți un specialist pentru strategii de gestionare."; }
+        else if(score >= 15) { t = "Anxietate Moderată"; d = "Te afli într-o perioadă tensionată. Tehnicile de respirație și sportul te pot ajuta să recalibrezi sistemul."; }
+        else { t = "Anxietate Scăzută"; d = "Mecanismul tău de protecție funcționează optim. Ești în controlul reacțiilor tale biologice."; }
+        
+        document.getElementById('res-title').innerText = t;
+        document.getElementById('res-desc').innerText = d;
+    }
+    update();
+</script>
+</body>
+</html>
